@@ -1,0 +1,52 @@
+### model
+flash_attn: fa2
+model_name_or_path: models/CADFS_stage1
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+freeze_vision_tower: false
+freeze_multi_modal_projector: false
+freeze_language_model: false
+deepspeed: configs/ds_z3_config.json
+
+### dataset
+dataset_dir: .
+dataset: stage2_image_train, stage2_text_train
+template: qwen2_vl
+cutoff_len: 8192
+overwrite_cache: true
+preprocessing_num_workers: 64
+dataloader_num_workers: 4
+
+### output
+output_dir: models/CADFS_stage2
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: false
+save_only_model: false
+report_to: tensorboard
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8 # == BATCH_SIZE / WORLD_SIZE / MICRO_BATCH_SIZE = 128 / 8 / 2
+learning_rate: 2.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.01
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+## eval
+eval_dataset: CADFS_image_test, CADFS_text_test
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 500
+
+### optimizations
+enable_liger_kernel: true

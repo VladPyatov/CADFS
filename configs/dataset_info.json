@@ -1,0 +1,90 @@
+{
+    "stage1_text_train": {
+      "file_name": "data/train_data/stage1_text_train.jsonl",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "messages"
+      },
+      "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant",
+        "system_tag": "system"
+      }
+    },
+    "stage2_text_train": {
+      "file_name": "data/train_data/stage2_text_train.jsonl",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "messages"
+      },
+      "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant",
+        "system_tag": "system"
+      }
+    },
+    "stage1_image_train": {
+      "file_name": "data/train_data/stage1_image_path_train.jsonl",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "messages",
+        "images": "images"
+      },
+      "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant",
+        "system_tag": "system"
+      }
+    },
+    "stage2_image_train": {
+      "file_name": "data/train_data/stage2_image_path_train.jsonl",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "messages",
+        "images": "images"
+      },
+      "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant",
+        "system_tag": "system"
+      }
+    },
+    "CADFS_text_test": {
+        "file_name": "data/test_data/CADFS_test/CADFS_text_test.jsonl",
+        "formatting": "sharegpt",
+        "columns": {
+          "messages": "messages"
+        },
+        "tags": {
+          "role_tag": "role",
+          "content_tag": "content",
+          "user_tag": "user",
+          "assistant_tag": "assistant",
+          "system_tag": "system"
+        }
+    },
+    "CADFS_image_test": {
+        "file_name": "data/test_data/CADFS_test/CADFS_image_path_test.jsonl",
+        "formatting": "sharegpt",
+        "columns": {
+          "messages": "messages",
+          "images": "images"
+        },
+        "tags": {
+          "role_tag": "role",
+          "content_tag": "content",
+          "user_tag": "user",
+          "assistant_tag": "assistant",
+          "system_tag": "system"
+        }
+      }
+  }
+  
