@@ -109,8 +109,7 @@ unzip data/raw/sketch_raw.zip -d data/raw
 ```
 and run our processing pipeline
 ```bash
-# the data processing code is coming soon
-# python -m scripts.parse_fscode --fs_dir data/raw/featurescript_raw --sketch_dir data/raw/sketch_raw --output_dir data/dataset/featurescript_rp
+python -m scripts.parse_fscode --fs_dir data/raw/featurescript_raw --sketch_dir data/raw/sketch_raw --output_dir data/dataset/featurescript_rp
 ```
 This saves the clean FeatureScript at `data/dataset/featurescript_rp/{chunk_id:04}/{model_id:08}.txt`,
 where `chunk_id` and `model_id` correspond to the chunk and model IDs from the [ABC dataset](https://deep-geometry.github.io/abc-dataset/).
