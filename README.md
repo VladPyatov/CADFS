@@ -379,7 +379,7 @@ unzip data/test_data/CADFS_test.zip -d data/test_data
 ```
 and then, run
 ```bash
-python -m scripts.evaluate_metrics --gt_dir data/test_data/CADFS_test/step_abc --pred_dir data/inference/CADFS_text_step --output_dir data/inference/CADFS_text_metrics
+python -m scripts.evaluate_metrics --gt_dir data/test_data/CADFS_test/step_abc --pred_dir data/inference/CADFS_text_step --output_dir data/inference/CADFS_text_metrics --use_safe_workers
 ```
 This compares the predicted B-reps with the reference and saves the values and statistics of the metrics to `metrics_per_shape.csv`, `metrics_summary.json`, `metrics_report.txt` in the `--output_dir`.
 
